@@ -1,12 +1,27 @@
-import Home from './pages/home/home'
-import Form from './pages/form/form'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Helmet } from "react-helmet";
+import MasterForm from "./pages/form/MasterForm";
+import { Container, Row, Col } from "reactstrap";
+
+import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">
-     <Form />
+      <Helmet>
+        <style>{"body { background-color: lightgray; }"}</style>
+      </Helmet>
+      <Container>
+        <Row>
+          <Col>
+            <MasterForm />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
 
-export default App;
+export default App
